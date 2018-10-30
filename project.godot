@@ -13,6 +13,10 @@ config_version=3
 config/name="durak"
 config/icon="res://icon.png"
 
+[autoload]
+
+Network="*res://Network.gd"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
