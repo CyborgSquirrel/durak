@@ -10,7 +10,7 @@ func _physics_process(delta):
 	var player_movement = Vector2(0,0)
 	player_movement.x += int(Input.is_action_pressed("game_right")) - int(Input.is_action_pressed("game_left"))
 	if is_on_floor():
-		player_movement.y -= int(Input.is_action_pressed("game_up") || Input.is_action_pressed("ui_select"))
+		player_movement.y -= int(Input.is_action_pressed("game_up"))
 	player_movement.x *= SPEED.x
 	player_movement.y *= SPEED.y
 	
@@ -19,9 +19,3 @@ func _physics_process(delta):
 	
 	for i in range(get_slide_count()):
 		var collider = get_slide_collision(i).get_collider()
-
-
-# Strawberry collision
-func _on_Area2D_body_entered(body):
-	if body.is_in_group("strawberries"):
-		body.free()

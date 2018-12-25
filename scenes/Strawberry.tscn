@@ -6,7 +6,6 @@
 "strawberries",
 ]]
 
-position = Vector2( 737.539, 177.962 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -25,19 +24,23 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 1 )
 region_rect = Rect2( 64, 0, 64, 64 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
 
+visible = false
+position = Vector2( 0, -2 )
 build_mode = 0
-polygon = PoolVector2Array( -26.9103, 20.0128, -22.423, 0.807373, -0.61499, -20.0134, 15.0903, -11.039, 25.6802, 4.48691, 14.1031, 19.3846, -16.7691, 26.9231 )
+polygon = PoolVector2Array( -24.6255, 24.6573, -26.7659, 16.809, -22.7229, 4.91759, -14.3989, -8.16293, -3.69666, -17.4382, 2.72469, -18.1517, 8.48386, -15.0527, 8.43255, -19.3408, 10.8108, -22.1948, 15.0917, -20.7678, 16.8344, -16.4417, 19.3726, -20.53, 22.4644, -19.8165, 22.4644, -17.2004, 20.494, -13.503, 24.6048, -11.7303, 26.2696, -9.11424, 24.367, -6.02248, 18.6591, -6.02248, 23.6535, 1.11235, 24.8427, 9.19849, 18.1835, 16.5711, 9.14603, 20.852, -3.22101, 23.9438, -16.5394, 26.3221 )
 
 
