@@ -19,6 +19,3 @@ func _physics_process(delta):
 	
 	for i in range(get_slide_count()):
 		var collider = get_slide_collision(i).get_collider()
-		print(collider.get_property_list())
-#		if collider.has_meta("strawberry"):
-#			print("aa")
