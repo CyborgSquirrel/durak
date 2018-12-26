@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ship.wav-776e7d7c77f6fce1a575d88d666fc26c.sample"
+
+[deps]
+
+source_file="res://sounds/ship.wav"
+dest_files=[ "res://.import/ship.wav-776e7d7c77f6fce1a575d88d666fc26c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

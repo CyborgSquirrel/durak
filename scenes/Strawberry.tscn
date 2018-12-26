@@ -26,8 +26,7 @@ angular_velocity = 0.0
 angular_damp = -1.0
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="." index="0"]

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hammer.png-326521e3b9231f5a6d478cb4fa540f2c.stex"
+path="res://.import/+profit.png-fc45e1010ec327cc799f1ad8596552c1.stex"
 
 [deps]
 
-source_file="res://textures/hammer.png"
-dest_files=[ "res://.import/hammer.png-326521e3b9231f5a6d478cb4fa540f2c.stex" ]
+source_file="res://textures/+profit.png"
+dest_files=[ "res://.import/+profit.png-fc45e1010ec327cc799f1ad8596552c1.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -25,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

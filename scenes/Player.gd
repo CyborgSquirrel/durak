@@ -5,6 +5,9 @@ const GRAVITY = Vector2(0, -100)
 
 var movement = Vector2(0, 0)
 
+onready var profit_scene = preload("Profit.tscn")
+onready var loss_scene = preload("Loss.tscn")
+
 func _ready():
 	set_physics_process(true)
 
@@ -22,7 +25,15 @@ func _physics_process(delta):
 	move_and_slide(movement, GRAVITY.normalized())
 
 
-# Strawberry collision
+# Ship and strawberry collision
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("strawberries"):
+		var profit = profit_scene.instance()
+		profit.position = position
+		get_tree().get_root().add_child(profit)
+		body.queue_free()
+	elif body.is_in_group("ships"):
+		var loss = loss_scene.instance()
+		loss.position = position
+		get_tree().get_root().add_child(loss)
 		body.queue_free()
