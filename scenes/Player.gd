@@ -1,27 +1,28 @@
 extends KinematicBody2D
 
-const SPEED = Vector2(500, 10000)
-const GRAVITY = Vector2(0, -200)
+const SPEED = Vector2(500, 2200)
+const GRAVITY = Vector2(0, -100)
+
+var movement = Vector2(0, 0)
 
 func _ready():
 	set_physics_process(true)
 
 func _physics_process(delta):
-	var player_movement = Vector2(0,0)
-	player_movement.x += int(Input.is_action_pressed("game_right")) - int(Input.is_action_pressed("game_left"))
+	movement.x = 0
+	
+	movement.x += int(Input.is_action_pressed("game_right")) - int(Input.is_action_pressed("game_left"))
+	movement.x *= SPEED.x
+
+	if movement.y < 800:
+		movement -= GRAVITY
 	if is_on_floor():
-		player_movement.y -= int(Input.is_action_pressed("game_up") || Input.is_action_pressed("ui_select"))
-	player_movement.x *= SPEED.x
-	player_movement.y *= SPEED.y
+		movement.y -= int(Input.is_action_pressed("game_up")) * SPEED.y
 	
-	var total_movement = player_movement - GRAVITY
-	move_and_slide(total_movement, GRAVITY.normalized())
-	
-	for i in range(get_slide_count()):
-		var collider = get_slide_collision(i).get_collider()
+	move_and_slide(movement, GRAVITY.normalized())
 
 
 # Strawberry collision
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("strawberries"):
-		body.free()
+		body.queue_free()

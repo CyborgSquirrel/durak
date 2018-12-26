@@ -25,7 +25,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Material", "Visibility" ]
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -107,11 +107,15 @@ __meta__ = {
 
 position = Vector2( 914.468, 291.663 )
 
-[node name="Strawberry3" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Strawberry5" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 853.415, 205.347 )
+
+[node name="Strawberry3" parent="." index="4" instance=ExtResource( 4 )]
 
 position = Vector2( 1330.97, 293.788 )
 
-[node name="Strawberry4" parent="." index="4" instance=ExtResource( 4 )]
+[node name="Strawberry4" parent="." index="5" instance=ExtResource( 4 )]
 
 position = Vector2( 820.076, 291.722 )
 
