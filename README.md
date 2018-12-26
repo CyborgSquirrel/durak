@@ -1,2 +1,2 @@
 # durak
-Durak with onine multiplayer baybeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+Your mom has a gay
